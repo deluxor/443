@@ -1,6 +1,6 @@
 ---
 date: '2025-01-07T11:20:44Z'
-draft: true
+draft: false
 title: 'Credenciais PPPoE ZTE F8748'
 ---
 **Antes de mais, quero desejar um bom ano de 2025 a todos!**  
