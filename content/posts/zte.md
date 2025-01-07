@@ -39,7 +39,6 @@ Este processo, no entanto, é complexo de realizar manualmente, pois envolve a r
 - Entre outros parâmetros técnicos.
 
 ---
-
 ## Ferramenta Automática
 
 De forma a simplificar este processo e torná-lo acessível a qualquer utilizador, criei uma ferramenta que automatiza todas estas etapas. Assim, qualquer pessoa consegue obter os dados de acesso de forma simples e rápida.
