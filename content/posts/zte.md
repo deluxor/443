@@ -50,9 +50,9 @@ Aproveitei o período natalício para construir esta tool, é escrita em RUST e 
 
 **⚠️ ATENÇÃO: Tendo em conta a total e compreensível desconfiança em executar uma ferramenta deste carácter proveniente de uma fonte não confiável, aconselho a sua utilização numa **VM (máquina virtual)** ou através de uma **sandbox**, desde que tenham conectividade com o router do qual pretendem obter as informações. ⚠️**
 
-**🔴 PS: EU COMO AUTOR DA FERRAMENTA, NÃO SOU RESPONSÁVEL POR QUALQUER DANO QUE ADVENHA DA SUA MÁ UTILIZAÇÃO! 🔴**
-
 #### Download
+
+**🔴 PS: EU COMO AUTOR DA FERRAMENTA, NÃO SOU RESPONSÁVEL POR QUALQUER DANO QUE ADVENHA DA SUA MÁ UTILIZAÇÃO! 🔴**
 
 - [Windows x64 (28.62 MB)](/grabber_win64.zip)   
   * ```SHA-256: 37e85cc41fa5cf0a9b3cd6599b4bfafe5bfb8143611983ce0162a75ea4eb0a59```   
