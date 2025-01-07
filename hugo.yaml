@@ -1,0 +1,12 @@
+baseURL: https://443-blog.pages.dev
+languageCode: pt-PT
+title: 443.PT - Research
+theme: ["PaperMod"]
+params:
+  # defaultTheme: light
+  # defaultTheme: dark
+  defaultTheme: light # to switch between dark or light according to browser theme
+  ShowShareButtons: false
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
