@@ -6,7 +6,11 @@ params:
   # defaultTheme: light
   # defaultTheme: dark
   defaultTheme: light # to switch between dark or light according to browser theme
-  ShowShareButtons: false
+  ShowShareButtons: true
   ShowReadingTime: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
+  homeInfoParams:
+    Title: Blog
+    Content: Guias, dicas e ferramentas tecnológicas...
+ignoreLogs: ['warning-goldmark-raw-html']

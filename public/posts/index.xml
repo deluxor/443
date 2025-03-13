@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on 443.PT - Research</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on 443.PT - Research</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>pt-PT</language>
+    <lastBuildDate>Thu, 13 Mar 2025 14:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Tutorial] Router OpenWRT com serviço 10 Gbit/s</title>
+      <link>http://localhost:1313/posts/openwrt/</link>
+      <pubDate>Thu, 13 Mar 2025 14:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/openwrt/</guid>
+      <description>&lt;p&gt;Três meses depois de ter publicado uma forma de obter as credênciais de acesso PPPoE neste BLOG, vou apresentar agora uma forma de as podermos utilizar num router próprio a correr um firmware chamado OpenWRT.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;ztef8748&#34; loading=&#34;lazy&#34; src=&#34;https://i.imgur.com/2lIcDSI.jpeg&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;sfp-xgs-pon-pppoe-&#34;&gt;SFP+, XGS-PON, PPPoE, 🤔?&lt;/h1&gt;
+&lt;p&gt;Vamos por partes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;SFP+&lt;/strong&gt;: O Small Form-factor Pluggable (SFP) é um módulo compacto e hot-swappable usado em redes de telecomunicações e transmissão de dados. Essencialmente, uma porta SFP num equipamento de rede funciona como um slot modular onde se pode encaixar um transceiver específico, seja para fibra ótica ou cabo de cobre. No caso do SFP+, é simplesmente pelo facto de suportar velocidades até 10 Gbit/s.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;XGS-PON&lt;/strong&gt;: O XGS-PON é uma tecnologia de rede ótica passiva (PON) que permite ligações de internet de alta velocidade, chegando até 10 Gbit/s tanto para download como para upload. Utiliza fibra ótica para distribuir a ligação a vários utilizadores sem necessidade de equipamentos ativos entre o fornecedor e o cliente. Comparado com o GPON tradicional, oferece maior largura de banda e melhor desempenho.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PPPoE&lt;/strong&gt;: O PPPoE (Point-to-Point Protocol over Ethernet) é um protocolo usado para estabelecer ligações de internet, combinando as funcionalidades do PPP com o Ethernet. Tipicamente exige autenticação (username e password) para autenticação no ISP.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Estes são alguns dos jargões com que nos deparamos neste mundo das redes, entendendo o papel de cada um, faz com que nos seja mais fácil entender os passos seguintes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Credenciais PPPoE ZTE F8748</title>
+      <link>http://localhost:1313/posts/zte/</link>
+      <pubDate>Tue, 07 Jan 2025 11:20:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/zte/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Antes de mais, quero desejar um bom ano de 2025 a todos!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Com a mais recente oferta de internet 10Gbps da DIGI, estão a instalar um CPE da marca Chinesa ZTE, cujo modelo é o F8748,
+igual ao da imagem abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;ztef8748&#34; loading=&#34;lazy&#34; src=&#34;https://i.imgur.com/IAhi5b7.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;credenciais-pppoe&#34;&gt;Credenciais PPPoE&lt;/h1&gt;
+&lt;p&gt;As credenciais PPPoE são utilizadas para realizar a autenticação &lt;strong&gt;PAP/CHAP&lt;/strong&gt; e subscrever o &lt;strong&gt;Access Concentrator&lt;/strong&gt; do lado do ISP e por conseguinte obter ligação à internet. Como o router em questão não disponibiliza (à data deste post) funcionalidades de &lt;strong&gt;bridge&lt;/strong&gt;, esta é a única forma de fazer bypass ao router e utilizar um dispositivo próprio.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
