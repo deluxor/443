@@ -13,8 +13,8 @@
       <link>http://localhost:1313/posts/openwrt/</link>
       <pubDate>Thu, 13 Mar 2025 14:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/openwrt/</guid>
-      <description>&lt;p&gt;Três meses depois de ter publicado uma forma de obter as credênciais de acesso PPPoE neste BLOG, vou apresentar agora uma forma de as podermos utilizar num router próprio a correr um firmware chamado OpenWRT.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;ztef8748&#34; loading=&#34;lazy&#34; src=&#34;https://i.imgur.com/2lIcDSI.jpeg&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Três meses depois de ter publicado uma forma de obter as credênciais de acesso PPPoE neste &lt;a href=&#34;https://blog.443.pt/posts/zte/&#34;&gt;&lt;strong&gt;post&lt;/strong&gt;&lt;/a&gt;, vou apresentar agora uma forma de as podermos utilizar num router próprio a correr um firmware chamado OpenWRT.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;router&#34; loading=&#34;lazy&#34; src=&#34;https://i.imgur.com/2lIcDSI.jpeg&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;sfp-xgs-pon-pppoe-&#34;&gt;SFP+, XGS-PON, PPPoE, 🤔?&lt;/h1&gt;
 &lt;p&gt;Vamos por partes:&lt;/p&gt;
 &lt;ul&gt;

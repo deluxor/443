@@ -7,10 +7,15 @@
 <meta name="robots" content="noindex, nofollow">
 <title>[Tutorial] Router OpenWRT com serviço 10 Gbit/s | 443.PT - Research</title>
 <meta name="keywords" content="">
-<meta name="description" content="Três meses depois de ter publicado uma forma de obter as credênciais de acesso PPPoE neste BLOG, vou apresentar agora uma forma de as podermos utilizar num router próprio a correr um firmware chamado OpenWRT.
+<meta name="description" content="Três meses depois de ter publicado uma forma de obter as credênciais de acesso PPPoE neste post, vou apresentar agora uma forma de as podermos utilizar num router próprio a correr um firmware chamado OpenWRT.
 
 SFP&#43;, XGS-PON, PPPoE, 🤔?
-Vamos por partes:
+
+
+
+
+  Ler
+  Vamos por partes:
 
 SFP&#43;: O Small Form-factor Pluggable (SFP) é um módulo compacto e hot-swappable usado em redes de telecomunicações e transmissão de dados. Essencialmente, uma porta SFP num equipamento de rede funciona como um slot modular onde se pode encaixar um transceiver específico, seja para fibra ótica ou cabo de cobre. No caso do SFP&#43;, é simplesmente pelo facto de suportar velocidades até 10 Gbit/s.
 XGS-PON: O XGS-PON é uma tecnologia de rede ótica passiva (PON) que permite ligações de internet de alta velocidade, chegando até 10 Gbit/s tanto para download como para upload. Utiliza fibra ótica para distribuir a ligação a vários utilizadores sem necessidade de equipamentos ativos entre o fornecedor e o cliente. Comparado com o GPON tradicional, oferece maior largura de banda e melhor desempenho.
@@ -89,65 +94,72 @@ Estes são alguns dos jargões com que nos deparamos neste mundo das redes, ente
     <div class="post-meta"><span title='2025-03-13 14:00:00 +0000 UTC'>March 13, 2025</span>&nbsp;·&nbsp;3 min
 
 </div>
-  </header> 
-  <div class="post-content"><p>Três meses depois de ter publicado uma forma de obter as credênciais de acesso PPPoE neste BLOG, vou apresentar agora uma forma de as podermos utilizar num router próprio a correr um firmware chamado OpenWRT.</p>
-<p><img alt="ztef8748" loading="lazy" src="https://i.imgur.com/2lIcDSI.jpeg"></p>
-<h1 id="sfp-xgs-pon-pppoe-">SFP+, XGS-PON, PPPoE, 🤔?<a hidden class="anchor" aria-hidden="true" href="#sfp-xgs-pon-pppoe-">#</a></h1>
-<p>Vamos por partes:</p>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#sfp-xgs-pon-pppoe-" aria-label="SFP&#43;, XGS-PON, PPPoE, 🤔?">SFP+, XGS-PON, PPPoE, 🤔?</a></li>
+                <li>
+                    <a href="#que-transceiver-sfp-xgs-pon-aconselhas" aria-label="Que transceiver SFP&#43; XGS-PON aconselhas?">Que transceiver SFP+ XGS-PON aconselhas?</a></li>
+                <li>
+                    <a href="#que-router-aconselhas" aria-label="Que router aconselhas?">Que router aconselhas?</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Três meses depois de ter publicado uma forma de obter as credênciais de acesso PPPoE neste <a href="https://blog.443.pt/posts/zte/"><strong>post</strong></a>, vou apresentar agora uma forma de as podermos utilizar num router próprio a correr um firmware chamado OpenWRT.</p>
+<p><img alt="router" loading="lazy" src="https://i.imgur.com/2lIcDSI.jpeg"></p>
+<h3 id="sfp-xgs-pon-pppoe-">SFP+, XGS-PON, PPPoE, 🤔?<a hidden class="anchor" aria-hidden="true" href="#sfp-xgs-pon-pppoe-">#</a></h3>
+<blockquote>
+
+
+<p><details >
+  <summary markdown="span"><strong>Ler</strong></summary>
+  <p>Vamos por partes:</p>
 <ul>
 <li><strong>SFP+</strong>: O Small Form-factor Pluggable (SFP) é um módulo compacto e hot-swappable usado em redes de telecomunicações e transmissão de dados. Essencialmente, uma porta SFP num equipamento de rede funciona como um slot modular onde se pode encaixar um transceiver específico, seja para fibra ótica ou cabo de cobre. No caso do SFP+, é simplesmente pelo facto de suportar velocidades até 10 Gbit/s.</li>
 <li><strong>XGS-PON</strong>: O XGS-PON é uma tecnologia de rede ótica passiva (PON) que permite ligações de internet de alta velocidade, chegando até 10 Gbit/s tanto para download como para upload. Utiliza fibra ótica para distribuir a ligação a vários utilizadores sem necessidade de equipamentos ativos entre o fornecedor e o cliente. Comparado com o GPON tradicional, oferece maior largura de banda e melhor desempenho.</li>
 <li><strong>PPPoE</strong>: O PPPoE (Point-to-Point Protocol over Ethernet) é um protocolo usado para estabelecer ligações de internet, combinando as funcionalidades do PPP com o Ethernet. Tipicamente exige autenticação (username e password) para autenticação no ISP.</li>
 </ul>
 <p>Estes são alguns dos jargões com que nos deparamos neste mundo das redes, entendendo o papel de cada um, faz com que nos seja mais fácil entender os passos seguintes.</p>
-<hr>
-<h2 id="que-transceiver-sfp-xgs-pon-aconselhas">Que transceiver SFP+ XGS-PON aconselhas?<a hidden class="anchor" aria-hidden="true" href="#que-transceiver-sfp-xgs-pon-aconselhas">#</a></h2>
-<p>Por uma questão de gosto pessoal, tendo sempre a comprar algo que me permita &ldquo;brincar&rdquo; ou que seja possível alterar determinadas funcionalidades, firmwares personalizados, etc&hellip; Após alguma pesquisa, descobri o <strong>WAS-110</strong>:
-<img alt="ztef8748" loading="lazy" src="https://i.imgur.com/eLCh5rK.png"></p>
-<hr>
-<h2 id="como-obter-as-credenciais">Como Obter as Credenciais?<a hidden class="anchor" aria-hidden="true" href="#como-obter-as-credenciais">#</a></h2>
-<p>Através de algumas vulnerabilidades presentes no firmware original do router, foi possível:</p>
-<ol>
-<li>Extrair as credenciais PPPoE.</li>
-<li>Decifrar as mesmas.</li>
-</ol>
-<p>Este processo, no entanto, é complexo de realizar manualmente, pois envolve a reconstrução de:</p>
-<ul>
-<li><strong>IVs (Initialization Vectors)</strong>;</li>
-<li>Senhas de cifra AES;</li>
-<li>Entre outros parâmetros técnicos.</li>
-</ul>
-<hr>
-<h2 id="ferramenta-automática">Ferramenta Automática<a hidden class="anchor" aria-hidden="true" href="#ferramenta-automática">#</a></h2>
-<p>De forma a simplificar este processo e torná-lo acessível a qualquer utilizador, criei uma ferramenta que automatiza todas estas etapas. Assim, qualquer pessoa consegue obter os dados de acesso de forma simples e rápida.</p>
-<p><img alt="Interface da Aplicação" loading="lazy" src="https://i.imgur.com/lFVZoZe.png"></p>
-<p>Aproveitei o período natalício para construir esta tool, é escrita em RUST e está disponivel para as principais plataformas, <strong>Windows</strong>, <strong>MacOS</strong> e <strong>Linux</strong>.</p>
-<p><strong>⚠️ ATENÇÃO: Tendo em conta a total e compreensível desconfiança em executar uma ferramenta deste carácter proveniente de uma fonte não confiável, aconselho a sua utilização numa <strong>VM (máquina virtual)</strong> ou através de uma <strong>sandbox</strong>, desde que tenham conectividade com o router do qual pretendem obter as informações. ⚠️</strong></p>
-<h3 id="download">Download<a hidden class="anchor" aria-hidden="true" href="#download">#</a></h3>
-<h5 id="-ps-eu-como-autor-da-ferramenta-não-sou-responsável-por-qualquer-dano-que-advenha-da-sua-má-utilização-"><strong>🔴 PS: EU COMO AUTOR DA FERRAMENTA, NÃO SOU RESPONSÁVEL POR QUALQUER DANO QUE ADVENHA DA SUA MÁ UTILIZAÇÃO! 🔴</strong><a hidden class="anchor" aria-hidden="true" href="#-ps-eu-como-autor-da-ferramenta-não-sou-responsável-por-qualquer-dano-que-advenha-da-sua-má-utilização-">#</a></h5>
-<ul>
-<li>
-<p><a href="/grabber_win64.zip">Windows x64 (28.62 MB)</a></p>
-<ul>
-<li><code>SHA-256: 37e85cc41fa5cf0a9b3cd6599b4bfafe5bfb8143611983ce0162a75ea4eb0a59</code></li>
-<li><a href="https://www.virustotal.com/gui/file/37e85cc41fa5cf0a9b3cd6599b4bfafe5bfb8143611983ce0162a75ea4eb0a59">https://www.virustotal.com/gui/file/37e85&hellip;</a></li>
-</ul>
-</li>
-<li>
-<p><a href="/grabber_linux.zip">Linux x64 (45.64 MB)</a></p>
-<ul>
-<li><code>SHA-256: d7390b2fecd8a2fd64076856a7bf67bbd3bcf7b91d15e3ab6c7067b6860582c4</code></li>
-<li><a href="https://www.virustotal.com/gui/file/d7390b2fecd8a2fd64076856a7bf67bbd3bcf7b91d15e3ab6c7067b6860582c4">https://www.virustotal.com/gui/file/d7390&hellip;</a></li>
-</ul>
-</li>
-<li>
-<p><a href="/grabber_macos_arm.zip">MacOS ARM64 (39.07 MB)</a></p>
-<ul>
-<li><code>SHA-256: 3317362a6342df962a74e1f6fc9cd73aec6209cf0d619ec76a9e5251ab953a00</code></li>
-<li><a href="https://www.virustotal.com/gui/file/3317362a6342df962a74e1f6fc9cd73aec6209cf0d619ec76a9e5251ab953a00">https://www.virustotal.com/gui/file/33173&hellip;</a></li>
-</ul>
-</li>
-</ul>
+
+</details></p>
+</blockquote>
+<h3 id="que-transceiver-sfp-xgs-pon-aconselhas">Que transceiver SFP+ XGS-PON aconselhas?<a hidden class="anchor" aria-hidden="true" href="#que-transceiver-sfp-xgs-pon-aconselhas">#</a></h3>
+<blockquote>
+
+
+<p><details >
+  <summary markdown="span"><strong>Ler</strong></summary>
+  <p>Por uma questão de gosto pessoal, tendo sempre a comprar algo que me permita &ldquo;brincar&rdquo; ou que seja possível alterar determinadas funcionalidades, firmwares personalizados, etc&hellip; Após alguma pesquisa, descobri o: <a href="https://pon.wiki/xgs-pon/ont/bfw-solutions/was-110/"><strong>WAS-110</strong></a></p>
+<p><img alt="pon" loading="lazy" src="https://i.imgur.com/eLCh5rK.png">
+Este módulo custa aproximadamente 170€ no Aliexpress, mas posso confirmar de viva voz que tem qualidade, e sobretudo bom suporte ao firmware <a href="https://pon.wiki/guides/install-the-8311-community-firmware-on-the-was-110/"><strong>8311</strong></a> que também ele é baseado no  OpenWRT. Estão à venda dois flavors, uma versão &ldquo;SSH&rdquo; que é um raw firmware, e a versão já com 8311. Aconselho-vos a última, vem pronto a usar.</p>
+<p>Assim que o introduzirem no router / switch podem aceder à webui através do seguinte endereço: <strong>https://192.168.11.1</strong> as credênciais podem ser consultadas <a href="https://pon.wiki/xgs-pon/ont/bfw-solutions/was-110/#default-credentials"><strong>aqui</strong></a>.</p>
+<p><img alt="pon2" loading="lazy" src="https://i.imgur.com/BcSA9CY.jpeg">
+⚠️ Tipicamente este módulos aquecem muito, facilmente atingem os <strong>80ºC</strong>, é importante manterem algum fluxo de ar, o dissipador que traz não é muito eficaz, devem também ter cuidado quando lhe tocarem após algumas horas de funcionamento, está quente!</p>
+<p><strong>Alguns screenshots do firmware 8311</strong>
+<img alt="pon3" loading="lazy" src="https://i.imgur.com/6P20aGt.jpeg">
+<img alt="pon4" loading="lazy" src="https://i.imgur.com/INgWrat.jpeg"></p>
+
+</details></p>
+</blockquote>
+<h3 id="que-router-aconselhas">Que router aconselhas?<a hidden class="anchor" aria-hidden="true" href="#que-router-aconselhas">#</a></h3>
+<blockquote>
+
+
+<p><details >
+  <summary markdown="span"><strong>Ler</strong></summary>
+  Da mesma forma que introduzi o módulo SFP+ WAS-110, um router é sempre um equipamento no qual gostamos ter liberdade de fazer as nossas modificações, alterar definições, firmwares, etc&hellip;
+Neste caso, eu já era &ldquo;cliente&rdquo; das boards da Sinovoip, desde o tempo do <strong>Banana PI R3</strong>, e quando anunciaram o lançamento do <strong>Banana PI R4</strong>, não tive muitas dúvidas de qual seria o meu futuro router 😉, e sim mais uma vez é um chinaware, no entanto não deixa de ser um excelente equipamento, com uma excelente comunidade a trabalhar continuamente em melhorias e novas funcionalidades.
+A foto da capa deste post já o mostra, foi tirada no dia em que o recebi.
+</details></p>
+</blockquote>
 <hr>
 <p>Se tiverem alguma dúvida / dificuldade / feedback, queiram por favor enviar um <a href="mailto:i@443.pt">email</a></p>
 

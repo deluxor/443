@@ -10,7 +10,4 @@ params:
   ShowReadingTime: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
-  homeInfoParams:
-    Title: Blog
-    Content: Guias, dicas e ferramentas tecnológicas...
 ignoreLogs: ['warning-goldmark-raw-html']
