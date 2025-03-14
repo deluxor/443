@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>[Tutorial] Router OpenWRT com serviço 10 Gbit/s | 443.PT - Research</title>
+<title>[Feedback] Router OpenWRT com serviço 10 Gbit/s | 443.PT - Research</title>
 <meta name="keywords" content="">
-<meta name="description" content="Três meses depois de ter publicado uma forma de obter as credênciais de acesso PPPoE neste post, vou apresentar agora uma forma de as podermos utilizar num router próprio a correr um firmware chamado OpenWRT.
+<meta name="description" content="Três meses depois de ter publicado uma forma de obter as credênciais de acesso PPPoE neste post, vou passar-vos o meu feedback de as utilizar num router próprio a correr um firmware chamado OpenWRT.
 
 SFP&#43;, XGS-PON, PPPoE, 🤔?
 
@@ -89,9 +89,9 @@ Estes são alguns dos jargões com que nos deparamos neste mundo das redes, ente
   <header class="post-header">
     <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      [Tutorial] Router OpenWRT com serviço 10 Gbit/s
+      [Feedback] Router OpenWRT com serviço 10 Gbit/s
     </h1>
-    <div class="post-meta"><span title='2025-03-13 14:00:00 +0000 UTC'>March 13, 2025</span>&nbsp;·&nbsp;3 min
+    <div class="post-meta"><span title='2025-03-13 14:00:00 +0000 UTC'>March 13, 2025</span>&nbsp;·&nbsp;5 min
 
 </div>
   </header> <div class="toc">
@@ -106,14 +106,16 @@ Estes são alguns dos jargões com que nos deparamos neste mundo das redes, ente
                 <li>
                     <a href="#que-transceiver-sfp-xgs-pon-aconselhas" aria-label="Que transceiver SFP&#43; XGS-PON aconselhas?">Que transceiver SFP+ XGS-PON aconselhas?</a></li>
                 <li>
-                    <a href="#que-router-aconselhas" aria-label="Que router aconselhas?">Que router aconselhas?</a>
+                    <a href="#que-router-aconselhas" aria-label="Que router aconselhas?">Que router aconselhas?</a></li>
+                <li>
+                    <a href="#algumas-dicas" aria-label="Algumas dicas">Algumas dicas</a>
                 </li>
             </ul>
         </div>
     </details>
 </div>
 
-  <div class="post-content"><p>Três meses depois de ter publicado uma forma de obter as credênciais de acesso PPPoE neste <a href="https://blog.443.pt/posts/zte/"><strong>post</strong></a>, vou apresentar agora uma forma de as podermos utilizar num router próprio a correr um firmware chamado OpenWRT.</p>
+  <div class="post-content"><p>Três meses depois de ter publicado uma forma de obter as credênciais de acesso PPPoE neste <a href="https://blog.443.pt/posts/zte/"><strong>post</strong></a>, vou passar-vos o meu feedback de as utilizar num router próprio a correr um firmware chamado OpenWRT.</p>
 <p><img alt="router" loading="lazy" src="https://i.imgur.com/2lIcDSI.jpeg"></p>
 <h3 id="sfp-xgs-pon-pppoe-">SFP+, XGS-PON, PPPoE, 🤔?<a hidden class="anchor" aria-hidden="true" href="#sfp-xgs-pon-pppoe-">#</a></h3>
 <blockquote>
@@ -138,8 +140,8 @@ Estes são alguns dos jargões com que nos deparamos neste mundo das redes, ente
 <p><details >
   <summary markdown="span"><strong>Ler</strong></summary>
   <p>Por uma questão de gosto pessoal, tendo sempre a comprar algo que me permita &ldquo;brincar&rdquo; ou que seja possível alterar determinadas funcionalidades, firmwares personalizados, etc&hellip; Após alguma pesquisa, descobri o: <a href="https://pon.wiki/xgs-pon/ont/bfw-solutions/was-110/"><strong>WAS-110</strong></a></p>
-<p><img alt="pon" loading="lazy" src="https://i.imgur.com/eLCh5rK.png">
-Este módulo custa aproximadamente 170€ no Aliexpress, mas posso confirmar de viva voz que tem qualidade, e sobretudo bom suporte ao firmware <a href="https://pon.wiki/guides/install-the-8311-community-firmware-on-the-was-110/"><strong>8311</strong></a> que também ele é baseado no  OpenWRT. Estão à venda dois flavors, uma versão &ldquo;SSH&rdquo; que é um raw firmware, e a versão já com 8311. Aconselho-vos a última, vem pronto a usar.</p>
+<p><img alt="pon" loading="lazy" src="https://i.imgur.com/eLCh5rK.png"></p>
+<p>Este módulo custa aproximadamente <a href="https://s.click.aliexpress.com/e/_on14BzX"><strong>165€ no Aliexpress</strong></a> isto no caso de optarem pela versão 8311. Posso confirmar de viva voz que tem qualidade, e sobretudo bom suporte ao firmware <a href="https://pon.wiki/guides/install-the-8311-community-firmware-on-the-was-110/"><strong>8311</strong></a> que também ele é baseado no  OpenWRT. Estão à venda dois flavors, uma versão &ldquo;SSH&rdquo; que é um raw firmware, e a versão já com 8311. Aconselho-vos a última, vem pronto a usar.</p>
 <p>Assim que o introduzirem no router / switch podem aceder à webui através do seguinte endereço: <strong>https://192.168.11.1</strong> as credênciais podem ser consultadas <a href="https://pon.wiki/xgs-pon/ont/bfw-solutions/was-110/#default-credentials"><strong>aqui</strong></a>.</p>
 <p><img alt="pon2" loading="lazy" src="https://i.imgur.com/BcSA9CY.jpeg">
 ⚠️ Tipicamente este módulos aquecem muito, facilmente atingem os <strong>80ºC</strong>, é importante manterem algum fluxo de ar, o dissipador que traz não é muito eficaz, devem também ter cuidado quando lhe tocarem após algumas horas de funcionamento, está quente!</p>
@@ -155,9 +157,75 @@ Este módulo custa aproximadamente 170€ no Aliexpress, mas posso confirmar de 
 
 <p><details >
   <summary markdown="span"><strong>Ler</strong></summary>
-  Da mesma forma que introduzi o módulo SFP+ WAS-110, um router é sempre um equipamento no qual gostamos ter liberdade de fazer as nossas modificações, alterar definições, firmwares, etc&hellip;
+  <p>Da mesma forma que introduzi o módulo SFP+ WAS-110, um router é sempre um equipamento no qual gostamos ter a liberdade de fazer as nossas modificações, alterar definições, firmwares, etc&hellip;
 Neste caso, eu já era &ldquo;cliente&rdquo; das boards da Sinovoip, desde o tempo do <strong>Banana PI R3</strong>, e quando anunciaram o lançamento do <strong>Banana PI R4</strong>, não tive muitas dúvidas de qual seria o meu futuro router 😉, e sim mais uma vez é um chinaware, no entanto não deixa de ser um excelente equipamento, com uma excelente comunidade a trabalhar continuamente em melhorias e novas funcionalidades.
-A foto da capa deste post já o mostra, foi tirada no dia em que o recebi.
+A foto da capa deste post já o mostra, foi tirada no dia em que o recebi.</p>
+<p>Conseguem este conjunto por volta dos <a href="https://s.click.aliexpress.com/e/_oCgTPev"><strong>165€ no Aliexpress</strong></a>, ou seja, a brincadeira fica num total de <strong>330€</strong> aproximadamente (router + xgs-pon sfp+). Aconselho o bundle 6, pois já traz tudo o que é necessário para montarem o router, desde a alimentação, dissipador, thermal pads e a caixa em aluminio de muito boa qualidade.</p>
+<p><img alt="pon6" loading="lazy" src="https://i.imgur.com/UF46Jdm.jpeg"></p>
+<p>Uma questão que me colocam, é se efetivamente este router consegue tirar partido dos <strong>10 Gbit/s</strong>, passando a explicar:</p>
+<p>Num serviço <strong>XGS-PON</strong> têm de ter algumas considerações:</p>
+<ul>
+<li><strong>FEC</strong> (Forward Error Correction) - Isto é o que permite adicionar redundância à informação transmitida de forma a conseguir recuperar eventuais erros.</li>
+<li><strong>GEM</strong> Encapsulation - Todos os pacotes transmitidos pela fibra vêm encapsulados num pacote GEM, que só por si já adiciona algum overhead.</li>
+<li><strong>PPPoE</strong> - É mais um encapsulamento adicional, e dependendo do MTU (maximum transmission unit) cria ainda mais overhead por cima do já mencionado.</li>
+</ul>
+<p>Em termos práticos:</p>
+<ul>
+<li><strong>Sem PPPoE</strong>: ~ 8.5–9 Gbit/s (depois do FEC e do PON)</li>
+<li><strong>Com PPPoE</strong>: ~ 7.5–8.5 Gbit/s (dependendo do MTU e do tamanho do pacote)</li>
+</ul>
+<p>O que quer dizer, que por melhor que seja o vosso equipamento, estarão sempre limitados pelo overhead, mas o BPI R4 consegue sem nenhum esforço bater nestes limites, alias, pelo facto de ter hardware offloading, o CPU nem mexe enquanto exaustam a ligação.
+<img alt="pon5" loading="lazy" src="https://i.imgur.com/Nn3gXIa.png">
+Exemplo da WEBUI
+<img alt="pon7" loading="lazy" src="https://i.imgur.com/UOJjaKA.png"></p>
+<p>Isto combinado com 4GB de RAM, 8GB de armazenamento EMMC, dá-nos muito espaço para instalarmos plugins, adblockers, IDS/IPS, docker, download managers, VPN&rsquo;s wireguard, IPSEC, OpenVPN, e uma infinidade de opções.</p>
+
+</details></p>
+</blockquote>
+<h3 id="algumas-dicas">Algumas dicas<a hidden class="anchor" aria-hidden="true" href="#algumas-dicas">#</a></h3>
+<blockquote>
+
+
+<p><details >
+  <summary markdown="span"><strong>Ler</strong></summary>
+  <p>Agora que já sabem que material comprar / usar, vou deixar aqui algumas dicas:</p>
+<ul>
+<li>Instalem a versão <strong>SNAPSHOT</strong> do OpenWRT!!</li>
+<li>Documentação de como instalar o OpenWRT no BPI R4: <a href="https://openwrt.org/inbox/toh/sinovoip/bananapi_bpi-r4"><strong>https://openwrt.org/inbox/toh/sinovoip/bananapi_bpi-r4</strong></a></li>
+<li>Após instalarem o OpenWRT não terão nenhuma interface web disponível, têm de a instalar, mas antes disso precisam de ligação à internet para o poderem fazer, portanto de forma a ganhar ligação à internet, se já tiverem o módulo SFP inserido, acedam por SSH ao router <code>ssh root@192.168.1.1</code> by default não precisa de password, de seguida acrescentem esta configuração ao ficheiro (pode ser adicionada no fundo), por exemplo <code>vi /etc/config/network</code>:</li>
+</ul>
+<pre tabindex="0"><code>config device
+        option type &#39;8021q&#39;
+        option ifname &#39;sfp-wan&#39;
+        option vid &#39;20&#39;
+        option name &#39;sfp-wan.20&#39;
+        option mtu &#39;1508&#39;
+        option macaddr &#39;&lt;MAC_ADDRESS_DO_ROUTER_ORIGINAL&gt;&#39;
+
+
+config interface &#39;wan&#39;
+        option device &#39;sfp-wan.20&#39;
+        option proto &#39;pppoe&#39;
+        option username &#39;xxxxxxx@digi&#39;
+        option password &#39;xxxxxxxxx&#39;
+        option ipv6 &#39;auto&#39;
+        option mtu &#39;1508&#39;
+</code></pre><p>De seguida fazemos restart à rede <code>/etc/init.d/network restart</code> ao fim de alguns segundos, já deverão ter ligação, testem com um <code>ping 1.1.1.1</code>, caso esteja tudo OK, procedam com a instalação da WEBUI, <code>apk update &amp;&amp; apk add luci</code>, após a execução deste comando já deverão conseguir aceder por http://192.168.1.1 e continuar com o setup.</p>
+<ul>
+<li>Para ativarem o hardware offloading façam:</li>
+</ul>
+<pre tabindex="0"><code>uci set firewall.@defaults[0].flow_offloading=&#39;1&#39;
+uci set firewall.@defaults[0].flow_offloading_hw=&#39;1&#39;
+uci commit
+</code></pre><ul>
+<li>Para manter o CPU com o clock baixo em on-demand e não aquecer tanto, acrescentem isto ao ficheiro <code>/etc/rc.local</code> antes do <code>exit 0</code>:</li>
+</ul>
+<pre tabindex="0"><code>echo ondemand &gt; /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+</code></pre><ul>
+<li>Instalar pacotes é fácil, para pesquisar por nome façam <code>apk search XPTO</code> para instalarem <code>apk add XPTO</code></li>
+<li>Para adblocker aconselho utilizarem o adblock-fast, podem instalar <code>apk add adblock-fast luci-app-adblock-fast</code> e se tiverem curiosidade podem consultar a documentação <a href="https://docs.openwrt.melmac.net/adblock-fast/"><strong>aqui</strong></a></li>
+</ul>
+
 </details></p>
 </blockquote>
 <hr>
@@ -172,8 +240,8 @@ A foto da capa deste post já o mostra, foi tirada no dia em que o recebi.
 
 <ul class="share-buttons">
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share [Tutorial] Router OpenWRT com serviço 10 Gbit/s on x"
-            href="https://x.com/intent/tweet/?text=%5bTutorial%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f&amp;hashtags=">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share [Feedback] Router OpenWRT com serviço 10 Gbit/s on x"
+            href="https://x.com/intent/tweet/?text=%5bFeedback%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f&amp;hashtags=">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
@@ -181,8 +249,8 @@ A foto da capa deste post já o mostra, foi tirada no dia em que o recebi.
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share [Tutorial] Router OpenWRT com serviço 10 Gbit/s on linkedin"
-            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f&amp;title=%5bTutorial%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs&amp;summary=%5bTutorial%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share [Feedback] Router OpenWRT com serviço 10 Gbit/s on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f&amp;title=%5bFeedback%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs&amp;summary=%5bFeedback%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
@@ -190,8 +258,8 @@ A foto da capa deste post já o mostra, foi tirada no dia em que o recebi.
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share [Tutorial] Router OpenWRT com serviço 10 Gbit/s on reddit"
-            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f&title=%5bTutorial%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share [Feedback] Router OpenWRT com serviço 10 Gbit/s on reddit"
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f&title=%5bFeedback%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
@@ -199,7 +267,7 @@ A foto da capa deste post já o mostra, foi tirada no dia em que o recebi.
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share [Tutorial] Router OpenWRT com serviço 10 Gbit/s on facebook"
+        <a target="_blank" rel="noopener noreferrer" aria-label="share [Feedback] Router OpenWRT com serviço 10 Gbit/s on facebook"
             href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
@@ -208,8 +276,8 @@ A foto da capa deste post já o mostra, foi tirada no dia em que o recebi.
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share [Tutorial] Router OpenWRT com serviço 10 Gbit/s on whatsapp"
-            href="https://api.whatsapp.com/send?text=%5bTutorial%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs%20-%20http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share [Feedback] Router OpenWRT com serviço 10 Gbit/s on whatsapp"
+            href="https://api.whatsapp.com/send?text=%5bFeedback%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs%20-%20http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
@@ -217,8 +285,8 @@ A foto da capa deste post já o mostra, foi tirada no dia em que o recebi.
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share [Tutorial] Router OpenWRT com serviço 10 Gbit/s on telegram"
-            href="https://telegram.me/share/url?text=%5bTutorial%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share [Feedback] Router OpenWRT com serviço 10 Gbit/s on telegram"
+            href="https://telegram.me/share/url?text=%5bFeedback%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f">
             <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
@@ -226,8 +294,8 @@ A foto da capa deste post já o mostra, foi tirada no dia em que o recebi.
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share [Tutorial] Router OpenWRT com serviço 10 Gbit/s on ycombinator"
-            href="https://news.ycombinator.com/submitlink?t=%5bTutorial%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs&u=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share [Feedback] Router OpenWRT com serviço 10 Gbit/s on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=%5bFeedback%5d%20Router%20OpenWRT%20com%20servi%c3%a7o%2010%20Gbit%2fs&u=http%3a%2f%2flocalhost%3a1313%2fposts%2fopenwrt%2f">
             <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
                 xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
                 <path
